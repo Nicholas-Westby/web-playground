@@ -76,3 +76,6 @@ _[Ss]cripts
 
 # Visual Studio Settings
 .vs/
+
+# Database Connection Strings
+connectionstrings.config
