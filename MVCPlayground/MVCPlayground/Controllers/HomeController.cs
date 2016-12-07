@@ -14,7 +14,8 @@ namespace MVCPlayground.Controllers
         
         public ActionResult Index()
         {
-            return View(db.NicksFavoriteThings);
+            var things = db.NicksFavoriteThings.ToList();
+            return View(things);
         }
 
         public ActionResult About()
