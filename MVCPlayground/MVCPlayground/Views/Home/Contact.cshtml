@@ -1,8 +1,14 @@
-﻿@{
+﻿@model dynamic
+@{
     ViewBag.Title = "Contact";
+    var phoneNumber = Model.PhoneNumber as string;
+    var address = Model.Address as string;
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
+
+<h4>@phoneNumber</h4>
+<h4>@address</h4>
 
 <address>
     One Microsoft Way<br />

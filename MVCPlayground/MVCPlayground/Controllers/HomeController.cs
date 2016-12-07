@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MVCPlayground.Database;
+using System.Dynamic;
 
 namespace MVCPlayground.Controllers
 {
@@ -28,7 +29,12 @@ namespace MVCPlayground.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
-            return View();
+            // Create an expando object to be used as the view model.
+            var contactInfo = new ExpandoObject() as dynamic;
+            contactInfo.PhoneNumber = "867-5309";
+            contactInfo.Address = "Any Street";
+
+            return View(contactInfo);
         }
     }
 }
