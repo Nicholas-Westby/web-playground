@@ -9,14 +9,9 @@
     <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
   </configSections>
   
+  <!-- Placeholder connection string, localDB not actually being used -->
   <connectionStrings>
-    <add name="DefaultConnection"
-  connectionString="Server=41ee2f82-b8a9-4eac-94af-a6d4002866d3.sqlserver.sequelizer.com;Database=db41ee2f82b8a94eac94afa6d4002866d3;User 
-ID=assgporgquoqrtin;Password=6uuhfBfNQ8ezaXAPVURMQPZpvdGRoTVrjSm4g8rFMcGKDqpWw2Z3dPXqBfUb4vz5;"
-  providerName="System.Data.SqlClient" />
-    <add name="NicksDatabaseEntities"
-  connectionString="metadata=res://*/Database.NicksDatabaseModel.csdl|res://*/Database.NicksDatabaseModel.ssdl|res://*/Database.NicksDatabaseModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=41ee2f82-b8a9-4eac-94af-a6d4002866d3.sqlserver.sequelizer.com;initial catalog=db41ee2f82b8a94eac94afa6d4002866d3;user id=assgporgquoqrtin;password=6uuhfBfNQ8ezaXAPVURMQPZpvdGRoTVrjSm4g8rFMcGKDqpWw2Z3dPXqBfUb4vz5;MultipleActiveResultSets=True;App=EntityFramework&quot;"
-  providerName="System.Data.EntityClient" />
+    <add name="DefaultConnection" connectionString="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-MVCPlayground-20161206025542.mdf;Initial Catalog=aspnet-MVCPlayground-20161206025542;Integrated Security=True" providerName="System.Data.SqlClient" />
   </connectionStrings>
   
   <appSettings>

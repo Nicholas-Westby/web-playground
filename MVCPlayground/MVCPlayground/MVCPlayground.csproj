@@ -225,6 +225,8 @@
     <Content Include="Database\NicksDatabaseModel.edmx.diagram">
       <DependentUpon>NicksDatabaseModel.edmx</DependentUpon>
     </Content>
+    <Content Include="connectionstrings.config" />
+    <Content Include="connectionstrings.config.sample" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -271,6 +273,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <None Include="Web.config.sample" />
+    <None Include="Web.config.Debug.sample">
+      <DependentUpon>Web.config.sample</DependentUpon>
+    </None>
+    <None Include="Web.config.Release.sample">
+      <DependentUpon>Web.config.sample</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -279,7 +288,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="packages.config" />
+    <Content Include="Database\packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
@@ -332,9 +341,6 @@
       Creates the connectionstrings.config from the connectionstrings.config.sample
       (won't overwrite the file if it already exists).
     -->
-    <Copy
-      SourceFiles="$(MSBuildProjectDirectory)/connectionstrings.config.sample"
-      DestinationFiles="$(MSBuildProjectDirectory)/connectionstrings.config"
-      Condition="!Exists('$(MSBuildProjectDirectory)/connectionstrings.config')" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)/connectionstrings.config.sample" DestinationFiles="$(MSBuildProjectDirectory)/connectionstrings.config" Condition="!Exists('$(MSBuildProjectDirectory)/connectionstrings.config')" />
   </Target>
 </Project>
