@@ -273,7 +273,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <None Include="Web.config.sample" />
+    <None Include="Web.config.sample">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.config.Debug.sample">
       <DependentUpon>Web.config.sample</DependentUpon>
     </None>
