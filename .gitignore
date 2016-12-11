@@ -79,3 +79,6 @@ _[Ss]cripts
 
 # Database Connection Strings
 connectionstrings.config
+Web.config
+Web.Debug.config
+Web.Release.config
