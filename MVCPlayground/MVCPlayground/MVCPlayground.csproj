@@ -239,13 +239,13 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
+    <None Include="Web.config.temp" />
+    <None Include="Web.config.Debug.temp">
+      <DependentUpon>Web.config.temp</DependentUpon>
+    </None>
+    <None Include="Web.config.Release.temp">
+      <DependentUpon>Web.config.temp</DependentUpon>
+    </None>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
@@ -338,9 +338,9 @@
   </Target> -->
   <Target Name="BeforeBuild">
     <!--
-      Creates the connectionstrings.config from the connectionstrings.config.sample
-      (won't overwrite the file if it already exists).
+      Overwrites web.config with real connection string with a sample connection string so that secrets don't get pushed to appharbor (appharbor substitutes the string).
+      Won't overwrite the local web.config as it already exists.
     -->
-    <Copy SourceFiles="$(MSBuildProjectDirectory)/connectionstrings.config.sample" DestinationFiles="$(MSBuildProjectDirectory)/connectionstrings.config" Condition="!Exists('$(MSBuildProjectDirectory)/connectionstrings.config')" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)/Web.config.sample" DestinationFiles="$(MSBuildProjectDirectory)/Web.config" Condition="!Exists('$(MSBuildProjectDirectory)/Web.config')" />
   </Target>
 </Project>
