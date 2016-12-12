@@ -11,6 +11,8 @@
   
   <!-- Placeholder connection string, localDB not actually being used -->
   <connectionStrings>
+    <add name="DefaultConnection" connectionString="" providerName="System.Data.SqlClient" />
+    <add name="NicksDatabaseEntities" connectionString="" providerName="System.Data.EntityClient" />
   </connectionStrings>
   
   <appSettings>
