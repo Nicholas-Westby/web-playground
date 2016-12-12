@@ -338,8 +338,7 @@
   <Target Name="BeforeBuild">
     <!--
       Overwrites web.config with real connection string with a sample connection string so that secrets don't get pushed to appharbor (appharbor substitutes the string).
-      Won't overwrite the local web.config as it already exists.
     -->
-    <Copy SourceFiles="$(MSBuildProjectDirectory)/Web.config.sample" DestinationFiles="$(MSBuildProjectDirectory)/Web.config" Condition="!Exists('$(MSBuildProjectDirectory)/Web.config')" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)/Web.config.sample" DestinationFiles="$(MSBuildProjectDirectory)/Web.config" />
   </Target>
 </Project>
