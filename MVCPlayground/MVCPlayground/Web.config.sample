@@ -11,7 +11,6 @@
   
   <!-- Placeholder connection string, localDB not actually being used -->
   <connectionStrings>
-    <add name="DefaultConnection" connectionString="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-MVCPlayground-20161206025542.mdf;Initial Catalog=aspnet-MVCPlayground-20161206025542;Integrated Security=True" providerName="System.Data.SqlClient" />
   </connectionStrings>
   
   <appSettings>
