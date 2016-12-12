@@ -225,6 +225,7 @@
     <Content Include="Database\NicksDatabaseModel.edmx.diagram">
       <DependentUpon>NicksDatabaseModel.edmx</DependentUpon>
     </Content>
+    <Content Include="connectionstrings.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -332,9 +333,6 @@
       Creates the connectionstrings.config from the connectionstrings.config.sample
       (won't overwrite the file if it already exists).
     -->
-    <Copy
-      SourceFiles="$(MSBuildProjectDirectory)/connectionstrings.config.sample"
-      DestinationFiles="$(MSBuildProjectDirectory)/connectionstrings.config"
-      Condition="!Exists('$(MSBuildProjectDirectory)/connectionstrings.config')" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)/connectionstrings.config.sample" DestinationFiles="$(MSBuildProjectDirectory)/connectionstrings.config" Condition="!Exists('$(MSBuildProjectDirectory)/connectionstrings.config')" />
   </Target>
 </Project>
