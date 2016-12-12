@@ -327,4 +327,14 @@
   </Target>
   <Target Name="AfterBuild">
   </Target> -->
+  <Target Name="BeforeBuild">
+    <!--
+      Creates the connectionstrings.config from the connectionstrings.config.sample
+      (won't overwrite the file if it already exists).
+    -->
+    <Copy
+      SourceFiles="$(MSBuildProjectDirectory)/connectionstrings.config.sample"
+      DestinationFiles="$(MSBuildProjectDirectory)/connectionstrings.config"
+      Condition="!Exists('$(MSBuildProjectDirectory)/connectionstrings.config')" />
+  </Target>
 </Project>
